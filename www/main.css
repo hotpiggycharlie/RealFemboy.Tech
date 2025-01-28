@@ -1,0 +1,28 @@
+/*------------------------------------*\
+  EPP LAYOUT CSS
+\*------------------------------------*/
+
+/* DEFAULT LAYOUT */
+
+[data-layout-name$=""] .main [data-module-template="promos"] [data-unit-id=""] {
+    display: none;
+}
+
+/* EPP LAYOUT */
+
+[data-layout-name$=""][data-segment-code="internal-epp-discounted"] .hide-epp {
+    display: none;
+}
+
+[data-layout-name$=""][data-segment-code="internal-epp-discounted"] .main [data-module-template="promos"] [data-unit-id=""] {
+    display: block;
+}
+
+[data-layout-name$=""][data-segment-code="internal-epp-discounted"] .main [data-module-template="promos"] [data-unit-id=""] {
+	display: none;
+}
+
+
+/*------------------------------------*\
+  END EPP LAYOUT CSS
+\*------------------------------------*/
