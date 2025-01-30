@@ -7,8 +7,10 @@ with open('d:/RealFemboy/RealFemboy.Tech/www/index.html', 'r', encoding='utf-8')
 
 # Function to update class names in HTML
 def update_class_names(soup, old_class, new_class):
-    for element in soup.find_all(class_=old_class):
-        element['class'] = [new_class if cls == old_class else cls for cls in element['class']]
+    for element in soup.find_all(class_=re.compile(r'\b' + re.escape(old_class) + r'\b')):
+        classes = element.get('class', [])
+        updated_classes = [new_class if cls == old_class else cls for cls in classes]
+        element['class'] = updated_classes
 
 # Function to update id names in HTML
 def update_id_names(soup, old_id, new_id):
@@ -22,21 +24,20 @@ def update_data_unit_id(soup, old_data_unit_id, new_data_unit_id):
 
 # Function to update class, id, and data-unit-id names in CSS
 def update_css_names(css_content, old_name, new_name):
-    css_content = re.sub(r'\.' + old_name + r'(\W)', r'.' + new_name + r'\1', css_content)
-    css_content = re.sub(r'#' + old_name + r'(\W)', r'#' + new_name + r'\1', css_content)
-    css_content = re.sub(r'\[data-unit-id="' + old_name + r'"\]', r'[data-unit-id="' + new_name + r'"]', css_content)
+    css_content = re.sub(r'\.' + re.escape(old_name) + r'(\W)', r'.' + new_name + r'\1', css_content)
+    css_content = re.sub(r'#' + re.escape(old_name) + r'(\W)', r'#' + new_name + r'\1', css_content)
+    css_content = re.sub(r'\[data-unit-id="' + re.escape(old_name) + r'"\]', r'[data-unit-id="' + new_name + r'"]', css_content)
     return css_content
 
 # List of name changes
 name_changes = {
     'homepage-section': 'HUB-section',
-    'apple-watch-unity': 'United-By-Femboys',
-    'apple-watch-series-10': 'Thighs',
-    'privacy-day': 'Single',
-    'macbook-air-m3': 'Cute-And-Love-Starved',
-    'ipad-pro': 'Want-You',
-    'airpods-pro-2': 'Like-Anime',
-    'iphone-tradein': 'Get-Your-Femboy'
+    'unit-image-apple-watch-unity-hero-apple-watch-unity': 'united-by-femboys',
+    'unit-image-apple-watch-series-10-promo-apple-watch-series-10-avail-lte': 'thighs-class',
+    'unit-image-macbook-air-m3-promo-macbook-air-m3': 'cute-and-love-starved',
+    'unit-image-ipad-pro-promo-ipadpro-avail': 'want-you',
+    'unit-image-airpods-pro-2-promo-airpods-pro-2-avail': 'like-anime',
+    'unit-image-iphone-tradein-promo-iphone-tradein': 'get-your-femboy'
 }
 
 # Update class, id, and data-unit-id names in HTML
@@ -46,11 +47,11 @@ for old_name, new_name in name_changes.items():
     update_data_unit_id(soup, old_name, new_name)
 
 # Save the updated HTML back to the file
-with open('d:/RealFemboy/RealFemboy.Tech/www/index.html', 'w', encoding='utf-8') as file:
+with open('d:/RealFemboy/RealFemboy.Tech/www/TrueIndex.html', 'w', encoding='utf-8') as file:
     file.write(str(soup))
 
 # Load the CSS file
-with open('d:/RealFemboy/RealFemboy.Tech/www/HUB_files/output3.css', 'r', encoding='utf-8') as file:
+with open('d:/RealFemboy/RealFemboy.Tech/www/HUB_files/main.built.css', 'r', encoding='utf-8') as file:
     css_content = file.read()
 
 # Update class, id, and data-unit-id names in CSS

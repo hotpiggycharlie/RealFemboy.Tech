@@ -5235,13 +5235,38 @@ html[data-text-zoom="6"] .main [data-module-template="generic"] {
     color:var(--text-color)
 }
 }
-.main [data-module-template="heroes"] .unit-image-wrapper .unit-image.unit-image-apple-watch-unity-hero-apple-watch-unity {
+.main [data-module-template="heroes"] .unit-image-wrapper .unit-image.united-by-femboys {
     Top: 2%;
     width:3008px;
     height:692px;
     background-size:3008px 692px;
     background-repeat:no-repeat;
     background-image:url('./Images/Banner.png'); /* Changed from ""United by femboys" large.jpg" */
+}
+@media only screen and (max-width: 412px) {
+    .main [data-module-template="heroes"] .unit-image-wrapper .unit-image.united-by-femboys {
+        Top: -5%;
+        Left: 40%;
+        width:416px;
+        height:740px;
+        background-size:416px 740px;
+        background-image:url('./Images/Bannerstall.png'); /* Changed from ""United by femboys" large.jpg" */
+}
+}
+.video-class {
+    width: 1884px;
+    Position: relative;
+    Left: 5%;
+}
+@media only screen and (max-width: 412px) {
+    .main [data-module-template="heroes"] .unit-image-wrapper .unit-image.united-by-femboys {
+        Top: -5%;
+        Left: 40%;
+        width:416px;
+        height:740px;
+        background-size:416px 740px;
+        background-image:url('./Images/Bannerstall.png'); /* Changed from ""United by femboys" large.jpg" */
+}
 }
 .main [data-module-template="heroes"] .unit-image-wrapper .unit-image.unit-image-bts-2024-hero-sticker-ipadair-alt {
     width:136px;
@@ -9688,7 +9713,7 @@ html.enhanced-xp.text-zoom .main [data-module-template="heroes"] [data-unit-id="
     .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-airpods-max-promo-airpodsmax-avail {
 }
 }
-.main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-airpods-pro-2-promo-airpods-pro-2-avail {
+.main [data-module-template="promos"] .unit-image-wrapper .unit-image.like-anime {
     width:1262px;
     height:580px;
     background-size:1262px 580px;
@@ -9696,11 +9721,11 @@ html.enhanced-xp.text-zoom .main [data-module-template="heroes"] [data-unit-id="
     background-image:url('./Images/femboy.jpg'); /* Changed from "/v/home/ca/images/promos/airpods-pro-2/promo_airpods_pro_2_avail__vkitqi3okwie_large.jpg" */
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-airpods-pro-2-promo-airpods-pro-2-avail {
+    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.like-anime {
 }
 }
 @media only screen and (max-width: 1068px) {
-    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-airpods-pro-2-promo-airpods-pro-2-avail {
+    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.like-anime {
     width:516px;
     height:490px;
     background-size:516px 490px;
@@ -9708,11 +9733,11 @@ html.enhanced-xp.text-zoom .main [data-module-template="heroes"] [data-unit-id="
 }
 }
 @media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
-    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-airpods-pro-2-promo-airpods-pro-2-avail {
+    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.like-anime {
 }
 }
 @media only screen and (max-width: 734px) {
-    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-airpods-pro-2-promo-airpods-pro-2-avail {
+    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.like-anime {
     width:734px;
     height:500px;
     background-size:734px 500px;
@@ -9720,7 +9745,7 @@ html.enhanced-xp.text-zoom .main [data-module-template="heroes"] [data-unit-id="
 }
 }
 @media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
-    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-airpods-pro-2-promo-airpods-pro-2-avail {
+    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.like-anime {
 }
 }
 .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-apple-card-promo-apple-card {
@@ -10038,7 +10063,7 @@ html.enhanced-xp.text-zoom .main [data-module-template="heroes"] [data-unit-id="
     .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-apple-watch-series-10-promo-apple-watch-series-10-avail {
 }
 }
-.main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-apple-watch-series-10-promo-apple-watch-series-10-avail-lte {
+.main [data-module-template="promos"] .unit-image-wrapper .unit-image.thighs-class {
     width:1262px;
     height:580px;
     background-size:1262px 580px;
@@ -10046,11 +10071,11 @@ html.enhanced-xp.text-zoom .main [data-module-template="heroes"] [data-unit-id="
     background-image:url('./Images/Thighs.png'); /* Changed from "/v/home/ca/images/promos/apple-watch-series-10/promo_apple_watch_series_10_avail_lte__c70y29goir42_large.jpg" */
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-apple-watch-series-10-promo-apple-watch-series-10-avail-lte {
+    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.thighs-class {
 }
 }
 @media only screen and (max-width: 1068px) {
-    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-apple-watch-series-10-promo-apple-watch-series-10-avail-lte {
+    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.thighs-class {
     width:516px;
     height:490px;
     background-size:516px 490px;
@@ -10058,11 +10083,11 @@ html.enhanced-xp.text-zoom .main [data-module-template="heroes"] [data-unit-id="
 }
 }
 @media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
-    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-apple-watch-series-10-promo-apple-watch-series-10-avail-lte {
+    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.thighs-class {
 }
 }
 @media only screen and (max-width: 734px) {
-    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-apple-watch-series-10-promo-apple-watch-series-10-avail-lte {
+    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.thighs-class {
     width:734px;
     height:500px;
     background-size:734px 500px;
@@ -10070,7 +10095,7 @@ html.enhanced-xp.text-zoom .main [data-module-template="heroes"] [data-unit-id="
 }
 }
 @media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
-    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-apple-watch-series-10-promo-apple-watch-series-10-avail-lte {
+    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.thighs-class {
 }
 }
 .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-apple-watch-ultra-2-promo-apple-watch-ultra2-avail {
@@ -10773,7 +10798,7 @@ html.enhanced-xp.text-zoom .main [data-module-template="heroes"] [data-unit-id="
     .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-ipad-mini-promo-ipad-mini {
 }
 }
-.main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-ipad-pro-promo-ipadpro-avail {
+.main [data-module-template="promos"] .unit-image-wrapper .unit-image.want-you {
     width:1262px;
     height:580px;
     background-size:1262px 580px;
@@ -10781,11 +10806,11 @@ html.enhanced-xp.text-zoom .main [data-module-template="heroes"] [data-unit-id="
     background-image:url('./Images/femboy.jpg'); /* Changed from "/v/home/ca/images/promos/ipad-pro/promo_ipadpro_avail__s271j89g8kii_large.jpg" */
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-ipad-pro-promo-ipadpro-avail {
+    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.want-you {
 }
 }
 @media only screen and (max-width: 1068px) {
-    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-ipad-pro-promo-ipadpro-avail {
+    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.want-you {
     width:516px;
     height:490px;
     background-size:516px 490px;
@@ -10793,11 +10818,11 @@ html.enhanced-xp.text-zoom .main [data-module-template="heroes"] [data-unit-id="
 }
 }
 @media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
-    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-ipad-pro-promo-ipadpro-avail {
+    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.want-you {
 }
 }
 @media only screen and (max-width: 734px) {
-    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-ipad-pro-promo-ipadpro-avail {
+    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.want-you {
     width:734px;
     height:500px;
     background-size:734px 500px;
@@ -10805,7 +10830,7 @@ html.enhanced-xp.text-zoom .main [data-module-template="heroes"] [data-unit-id="
 }
 }
 @media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
-    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-ipad-pro-promo-ipadpro-avail {
+    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.want-you {
 }
 }
 .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-iphone-16-pro-promo-iphone16pro-avail {
@@ -10878,7 +10903,7 @@ html.enhanced-xp.text-zoom .main [data-module-template="heroes"] [data-unit-id="
     .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-iphone-16-promo-iphone16-avail {
 }
 }
-.main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-iphone-tradein-promo-iphone-tradein {
+.main [data-module-template="promos"] .unit-image-wrapper .unit-image.get-your-femboy {
     width:1262px;
     height:580px;
     background-size:1262px 580px;
@@ -10886,11 +10911,11 @@ html.enhanced-xp.text-zoom .main [data-module-template="heroes"] [data-unit-id="
     background-image:url('./Images/femboy.jpg'); /* Changed from "/v/home/ca/images/promos/iphone-tradein/promo_iphone_tradein__bugw15ka691e_large.jpg" */
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-iphone-tradein-promo-iphone-tradein {
+    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.get-your-femboy {
 }
 }
 @media only screen and (max-width: 1068px) {
-    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-iphone-tradein-promo-iphone-tradein {
+    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.get-your-femboy {
     width:516px;
     height:490px;
     background-size:516px 490px;
@@ -10898,11 +10923,11 @@ html.enhanced-xp.text-zoom .main [data-module-template="heroes"] [data-unit-id="
 }
 }
 @media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
-    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-iphone-tradein-promo-iphone-tradein {
+    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.get-your-femboy {
 }
 }
 @media only screen and (max-width: 734px) {
-    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-iphone-tradein-promo-iphone-tradein {
+    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.get-your-femboy {
     width:734px;
     height:548px;
     background-size:734px 548px;
@@ -10910,7 +10935,7 @@ html.enhanced-xp.text-zoom .main [data-module-template="heroes"] [data-unit-id="
 }
 }
 @media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
-    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-iphone-tradein-promo-iphone-tradein {
+    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.get-your-femboy {
 }
 }
 .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-lny-2025-promo-lny25-gifting {
@@ -11018,7 +11043,7 @@ html.enhanced-xp.text-zoom .main [data-module-template="heroes"] [data-unit-id="
     .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-mac-mini-promo-macmini-announce {
 }
 }
-.main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-macbook-air-m3-promo-macbook-air-m3 {
+.main [data-module-template="promos"] .unit-image-wrapper .unit-image.cute-and-love-starved {
     width:1262px;
     height:580px;
     background-size:1262px 580px;
@@ -11026,11 +11051,11 @@ html.enhanced-xp.text-zoom .main [data-module-template="heroes"] [data-unit-id="
     background-image:url('./Images/Cute.gif'); /* Changed from "/v/home/ca/images/promos/macbook-air-m3/promo_macbook_air_m3__e43jegok3wuq_large.jpg" */
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-macbook-air-m3-promo-macbook-air-m3 {
+    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.cute-and-love-starved {
 }
 }
 @media only screen and (max-width: 1068px) {
-    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-macbook-air-m3-promo-macbook-air-m3 {
+    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.cute-and-love-starved {
     width:516px;
     height:490px;
     background-size:516px 490px;
@@ -11038,11 +11063,11 @@ html.enhanced-xp.text-zoom .main [data-module-template="heroes"] [data-unit-id="
 }
 }
 @media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
-    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-macbook-air-m3-promo-macbook-air-m3 {
+    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.cute-and-love-starved {
 }
 }
 @media only screen and (max-width: 734px) {
-    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-macbook-air-m3-promo-macbook-air-m3 {
+    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.cute-and-love-starved {
     width:734px;
     height:500px;
     background-size:734px 500px;
@@ -11050,7 +11075,7 @@ html.enhanced-xp.text-zoom .main [data-module-template="heroes"] [data-unit-id="
 }
 }
 @media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
-    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-macbook-air-m3-promo-macbook-air-m3 {
+    .main [data-module-template="promos"] .unit-image-wrapper .unit-image.cute-and-love-starved {
 }
 }
 .main [data-module-template="promos"] .unit-image-wrapper .unit-image.unit-image-macbook-pro-14-and-16-promo-mbp {
