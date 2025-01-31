@@ -1,5 +1,5 @@
-import * as THREE from 'three';
-import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/GLTFLoader.js';
+import * as THREE from 'https://cdn.skypack.dev/three@0.133.0/build/three.module.js';
+import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.133.0/examples/jsm/loaders/GLTFLoader.js';
 
 // Set up scene
 const scene = new THREE.Scene();
@@ -8,32 +8,33 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
+let loaded = false;
+let model;
 // Add lighting
 const light = new THREE.DirectionalLight(0xffffff, 1);
-light.position.set(2, 2, 5);
+light.position.set(1, 5, 5);
 scene.add(light);
 
 // Load Model
 const loader = new GLTFLoader();
-loader.load("./Static/ASTOLFO.glb", function (gltf) {
+loader.load("../../Static/ASTOLFO.glb", function (gltf) {
     scene.add(gltf.scene);
+    model = gltf.scene.children[0];
+    loaded = true;
 }, undefined, function (error) {
     console.error("Model loading error:", error);
 });
 
 // Add a simple object (replace this with a loaded model later)
-const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00, wireframe: true });
-const cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
 
 camera.position.z = 5;
 
 // Animation loop
 function animate() {
     requestAnimationFrame(animate);
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
+    if (loaded) {
+        model.rotation.y += 0.01;
+    }
     renderer.render(scene, camera);
 }
 animate();
