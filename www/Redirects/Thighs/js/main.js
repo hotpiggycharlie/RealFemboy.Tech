@@ -9,7 +9,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 let loaded = false;
-let model;
+let model1, model2;
 // Add lighting
 const light = new THREE.DirectionalLight(0xffffff, 1);
 light.position.set(1, 5, 5);
@@ -17,9 +17,14 @@ scene.add(light);
 
 // Load Model
 const loader = new GLTFLoader();
-loader.load("../../Static/ASTOLFO.glb", function (gltf) {
+loader.load("../../Static/thighs.glb", function (gltf) {
     scene.add(gltf.scene);
-    model = gltf.scene.children[0];
+    model1 = gltf.scene.children[0];
+    model2 = gltf.scene.children[1];
+    model1.material = new THREE.MeshBasicMaterial({color: 0x00ff00, wireframe: true});
+    model2.material = new THREE.MeshBasicMaterial({color: 0x00ff00, wireframe: true});
+    model1.position.z = 4;
+    model2.position.z = 4;
     loaded = true;
 }, undefined, function (error) {
     console.error("Model loading error:", error);
@@ -33,7 +38,8 @@ camera.position.z = 5;
 function animate() {
     requestAnimationFrame(animate);
     if (loaded) {
-        model.rotation.y += 0.01;
+        model1.rotation.y += 0.01;
+        model2.rotation.y += 0.01;
     }
     renderer.render(scene, camera);
 }
