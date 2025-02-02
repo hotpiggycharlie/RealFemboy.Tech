@@ -3,20 +3,27 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Website Hub</title>
+    <title>Femboy Name Finder</title>
+
+    <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .name-display {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 <div class="container hub-container">
-    <h1 class="text-center mb-4">My Website Hub</h1>
     <div class="row">
         <div class="col-md-4 mb-4">
             <div class="card hub-card">
                 <div class="card-body text-center text-white">
                     <h5 class="card-title">Femboy Name Finder</h5>
                     <p class="card-text">Generate a random femboy name.</p>
-                    <a href="namefinder/index.html" class="btn btn-primary">Go to Name Finder</a>
+                    <a href="../namefinder/index.html" class="btn btn-primary">Go to Name Finder</a>
                 </div>
             </div>
         </div>
@@ -25,7 +32,7 @@
                 <div class="card-body text-center text-white">
                     <h5 class="card-title">Femboy-O-Meter</h5>
                     <p class="card-text">Upload an image to get your femboy rating.</p>
-                    <a href="femboy-o-meter/index.html" class="btn btn-primary">Go to Femboy-O-Meter</a>
+                    <a href="../femboy-o-meter/index.html" class="btn btn-primary">Go to Femboy-O-Meter</a>
                 </div>
             </div>
         </div>
@@ -34,12 +41,34 @@
                 <div class="card-body text-center text-white">
                     <h5 class="card-title">Femboy Takeover Map</h5>
                     <p class="card-text">See the femboy takeover status of different countries.</p>
-                    <a href="femboy-map/index.html" class="btn btn-primary">Go to Takeover Map</a>
+                    <a href="../femboy-map/index.html" class="btn btn-primary">Go to Takeover Map</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<div class="container py-5">
+    <h1 class="text-center mb-4">Femboy Name Finder</h1>
+    <div class="text-center mb-3">
+        <button class="btn btn-primary" type="button" onclick="generateRandomName()">Generate Name</button>
+    </div>
+    <div id="name-container" class="text-center name-display">
+        Get your Femboy Name TODAY!.
+    </div>
+</div>
+
+<script>
+    const names = ["Alex", "Ashe", "Finn", "Noel", "Jessie", "John Femboy", "Nikki", "Riley", "Taylor", "Robin", "Sammy"];
+
+    function generateRandomName() {
+        const randomIndex = Math.floor(Math.random() * names.length);
+        const randomName = names[randomIndex];
+        document.getElementById('name-container').textContent = randomName;
+    }
+</script>
+
+<!-- Bootstrap JS Bundle (Optional) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

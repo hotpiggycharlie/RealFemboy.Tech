@@ -1,0 +1,15 @@
+﻿.hub-container {
+    margin-top: 50px;
+}
+.hub-card {
+    border-color: #495057;
+    border-width: 2px;
+    border-radius: 10px;
+}
+.hub-card a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.hub-card a:hover {
+    text-decoration: underline;
+}
