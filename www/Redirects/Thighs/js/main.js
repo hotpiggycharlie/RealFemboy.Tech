@@ -29,16 +29,16 @@ function CreateModel() {
   loaderGLTF.load(
     "../../Static/thighs.glb",
     function (gltf) {
-      scene.background = new THREE.Color("Gray");
+      scene.background = new THREE.Color(0x212529);
       model1 = gltf.scene.children[0];
       model2 = gltf.scene.children[1];
       model1.material = new THREE.MeshBasicMaterial({
-        color: 0x00ff00,
+        color: 0xFEE3D4,
         wireframe: true,
       });
       model2.material = new THREE.MeshBasicMaterial({
         color: 0x000000,
-        wireframe: true,
+        wireframe: false,
       });
       pivot.add(model1);
       pivot.add(model2);
@@ -55,7 +55,7 @@ function CreateText() {
   TextLoader.load(
     "../../Static/fonts/VCR OSD Mono_Regular.json",
     function (font) {
-      const textGeometry = new TextGeometry("Thicc", {
+      const textGeometry = new TextGeometry("Thigh.", {
         font: font,
         size: 0.1,
         height: 0.01,
@@ -117,7 +117,7 @@ function animate() {
     typeof model2 !== "undefined" &&
     typeof textMesh !== "undefined"
   ) {
-    pivot.rotation.y += 0.005; // Rotate the parent object
+    //pivot.rotation.y += 0.005; // Rotate the parent object
     let vector3 = new THREE.Vector3();
     LineOrigin.getWorldPosition(vector3);
     points = [
@@ -130,21 +130,104 @@ function animate() {
     if (pivot.rotation.y > 6.28) {
       pivot.rotation.y = 0;
     }
+    if (pivot.rotation.y < 0) {
+      pivot.rotation.y = Math.PI * 2;
+    }
     if (pivot.rotation.y > 1.57 && pivot.rotation.y < 4.71) {
       if (line.material.opacity > 0) {
         line.material.opacity -= 0.01;
       }
-    } else if (line.material.opacity < 1) {
+      if(pivot.rotation.y > 1.57){
+        textMesh.material.color.r = (pivot.rotation.y - Math.PI) / Math.PI;
+        textMesh.material.color.b = 1-(textMesh.material.color.r);
+      }
+      if(pivot.rotation.y < 4.71){
+        textMesh.material.color.r = (pivot.rotation.y) / Math.PI;
+        textMesh.material.color.b = 1-(textMesh.material.color.r);
+      }
+    }else if (line.material.opacity < 1) {
       line.material.opacity += 0.005;
+    }else{
+      if(textMesh.material.color.r < 1){
+        textMesh.material.color.r = 1;
+      }
+      if(textMesh.material.color.r > 0){
+        textMesh.material.color.r = 0;
+      }
     }
-    textMesh.material.color.r = pivot.rotation.y / 6.28;
-    textMesh.material.color.b = 1-textMesh.material.color.r;
     textMesh.material.opacity = line.material.opacity;
     sprite.material.opacity = line.material.opacity*2;
   }
   renderer.render(scene, camera);
 }
 animate();
+
+//Scrolling
+window.addEventListener('wheel', (event) => {
+  pivot.rotation.y += 0.0025 * event.deltaY; // Rotate the parent object
+});
+
+
+//#region PC Drag
+let isDragging = false;
+let previousX = 0;
+let previousY = 0;
+
+window.addEventListener("mousedown", (event) => {
+    isDragging = true;
+    previousX = event.clientX;
+    previousY = event.clientY;
+});
+
+window.addEventListener("mousemove", (event) => {
+    if (isDragging) {
+        const deltaX = event.clientX - previousX;
+        const deltaY = event.clientY - previousY;
+
+        pivot.rotation.y += deltaX * 0.01; // Rotate the parent object
+
+        previousX = event.clientX;
+        previousY = event.clientY;
+    }
+});
+
+window.addEventListener("mouseup", () => {
+    isDragging = false;
+});
+
+window.addEventListener("mouseleave", () => {
+    isDragging = false;
+});
+//#endregion
+
+//#region Mobile Touch
+//mobile touch
+window.addEventListener("touchstart", (event) => {
+    if (event.touches.length === 1) { // Single-finger swipe
+        isDragging = true;
+        previousX = event.touches[0].clientX;
+        previousY = event.touches[0].clientY;
+    }
+});
+
+window.addEventListener("touchmove", (event) => {
+    if (isDragging && event.touches.length === 1) {
+        const deltaX = event.touches[0].clientX - previousX;
+        const deltaY = event.touches[0].clientY - previousY;
+
+        pivot.rotation.y += deltaX * 0.01; // Rotate the parent object
+
+        previousX = event.touches[0].clientX;
+        previousY = event.touches[0].clientY;
+    }
+});
+
+window.addEventListener("touchend", () => {
+    isDragging = false;
+});
+
+//#endregion
+
 
 // Handle window resizing
 window.addEventListener("resize", () => {
